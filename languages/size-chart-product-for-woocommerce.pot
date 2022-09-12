@@ -1,0 +1,144 @@
+# Copyright (C) 2022 
+# This file is distributed under the same license as the Size Chart Product For Woocommerce plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Size Chart Product For Woocommerce 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/size-chart-product-for-woocommerce\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-06-16T06:16:27+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: size-chart-product-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+msgid "Size Chart Product For Woocommerce"
+msgstr ""
+
+#. Description of the plugin
+msgid "This plugin allows create Size Chart plugin."
+msgstr ""
+
+#: main/backend/scpfw_charts_mb.php:5
+msgid "Assign Products"
+msgstr ""
+
+#: main/backend/scpfw_charts_mb.php:7
+msgid "Assign Categories"
+msgstr ""
+
+#: main/backend/scpfw_charts_mb.php:9
+msgid "Assign Attributes"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:15
+msgid "Add New"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:16
+msgid "Add New "
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:17
+msgid "New "
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:18
+msgid "Edit "
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:19
+msgid "View "
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:20
+msgid "All "
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:21
+msgid "Search "
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:22
+msgid "Parent "
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:23
+msgid "No Size Chart found."
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:24
+msgid "No Size Chart found in Trash."
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:29
+msgid "Description"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:50
+msgid "All Size Chart Settings"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:64
+msgid "Chart"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:67
+msgid "Chart Show Settings"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:70
+msgid "Table Settings"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:73
+msgid "Tab Settings"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:75
+msgid "Support"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:79
+msgid "Create Chart"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:181
+msgid "Single Product Page Setting"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:225
+msgid "Product Tab Setting"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:251
+msgid "Popup Button Setting"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:324
+msgid "Shop Page Setting"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:377
+msgid "User Setting"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:407
+msgid "table Setting"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:484
+msgid "Tab Setting"
+msgstr ""
+
+#: main/backend/scpfw_create_post.php:742
+#: main/backend/scpfw_create_post.php:743
+msgid "Import Sample Size Charts"
+msgstr ""
+
+#: main/backend/scpfw_product_mb.php:7
+msgid "All Size Chart"
+msgstr ""

@@ -1,0 +1,515 @@
+.scpfw_body_sizechart {
+    overflow: hidden;
+    position: relative;
+}
+.scpfw_body_sizechart:after {
+    position: absolute;
+    content: "";
+    background-color: rgba(0,0,0,45%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+.scpfw_loader {
+    width: 40px;
+    padding: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999999999;
+    background-color: #ffffff;
+    border-radius: 3px;
+}
+
+
+/*create popupbutton*/
+.scpfw_btn {
+    width: 100%;
+    display: inline-block;
+}
+.scpfw_open {
+    display: inline-block;
+    width: auto;
+    padding: 10px 15px;
+    margin: 15px 0px;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+}
+.scpfw_open:hover, .scpfw_open:focus {
+    text-decoration: none;
+}
+/*end create popupbutton*/
+
+/*create sidepopupbutton*/
+.scpfw_sidepoup_btn {
+    width: 100%;
+    display: inline-block;
+}
+.scpfw_sidepoup_open {
+    display: inline-block;
+    width: auto;
+    padding: 10px 15px;
+    margin: 15px 0px;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+}
+.scpfw_sidepoup_open:hover, .scpfw_sidepoup_open:focus {
+    text-decoration: none;
+}
+/*end create sidepopupbutton*/
+
+
+/*create popup*/
+.scpfw_sizechart_main {
+    display: none;
+    position: fixed;
+    z-index: 9999999;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.scpfw_sizechart_content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 45%;
+    border-radius: 5px;
+    padding: 20px;
+    z-index: 99999;
+    box-sizing: border-box;
+}
+.scpfw_popup_header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.scpfw_popup_header h1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0px;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+.scpfw_popup_close {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: -33px;
+    top: -33px;
+    height: 25px;
+    line-height: 25px;
+    width: 25px;
+    z-index: 9999999;
+    background-color: black;
+    border-radius: 100%;
+    cursor: pointer;
+    justify-content: center;
+}
+.scpfw_popup_close svg {
+    height: auto;
+    width: 11px;
+}
+.scpfw_popup_close svg path {
+    fill: #fff;
+}
+.scpfw_popup_close:hover, .scpfw_popup_close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.scpfw_popup_body {
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+}
+.scpfw_popup_body table, .scpfw_popup_body tbody {
+    margin: 0px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.scpfw_popup_body table tbody tr {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+.scpfw_schart_popup_cls {
+    display: none;
+    background: transparent;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+/*end create popup*/
+
+
+/*create sidepopup*/
+.scpfw_schart_sdpopup_main {
+    position: fixed;
+    top: 0;
+    left: inherit;
+    right: -100%;
+    max-width: 550px;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 2rem 1.125rem;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: all .5s ease;
+    z-index: 99999;
+    box-sizing: border-box;
+}
+.scpfw_schart_sdpopup_main.active {
+    right: 0;
+    left: inherit;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 2rem 2.5rem;
+    opacity: 1;
+    visibility: visible;
+}
+.scpfw_schart_sdpopup_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px;
+    display: flex;
+    border: 1px solid;
+    cursor: pointer;
+}
+.scpfw_schart_sdpopup_close svg {
+    width: 14px;
+    height: auto;
+    transition: .5s;
+    transform: rotate(0deg);
+}
+.scpfw_schart_sdpopup_close:hover svg {
+    transition: .5s;
+    transform: rotate(180deg);
+}
+.scpfw_sdpp_body {
+    overflow: hidden;
+    position: relative;
+}
+.scpfw_sdpp_body:after {
+    position: absolute;
+    content: "";
+    background-color: rgba(0,0,0,0.2);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+.scpfw_schart_sidpp_overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0000006b;
+    opacity: 0;
+    visibility: hidden;
+}
+.scpfw_schart_sidpp_overlay.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 9999;
+}
+.scpfw_sdpp_table h2:before, .scpfw_sdpp_table h1:before {
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+}
+.scpfw_sdpp_table table tr td {
+    background-color: transparent!important;
+    padding: 5px;
+    font-size: 15px;
+    display: inline-block;
+    width: 33.33%;
+    box-sizing: border-box;
+    border: none;
+}
+ul.scpfw_sdpp_front_tabs {
+    margin: 0;
+    padding: 0px;
+    list-style: none;
+    border-bottom: 1px solid #777;
+    font-size: 17px;
+}
+ul.scpfw_sdpp_front_tabs li {
+    display: inline-block;
+    border-radius: 4px 4px 0 0;
+    padding: 6px 10px;
+    text-transform: capitalize;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0;
+}
+ul.scpfw_sdpp_front_tabs li.current {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #777;
+    border-bottom-color: transparent;
+    margin-bottom: -1px;
+}
+.scpfw_sdpp_frtab_content {
+    display: none;
+    padding: 15px;
+    margin: 0;
+    border: 1px solid #777;
+    border-top: 0px;
+    font-size: 17px;
+}
+.scpfw_sdpp_frtab_content.current{
+    display: inherit;
+}
+body .scpfw_sdpp_frtab_content h2 {
+    margin: 0px 0px 10px 0px !important;
+    padding: 10px 10px !important;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px !important;
+}
+.scpfw_sdpp_szchart_content {
+    background-color: #fefefe;
+    margin: 20px 0 0 0;
+    width: 100%;
+}
+.scpfw_sdpp_popup_header {
+    width: 100%;
+    display: flex;
+    /* display: inline-block; */
+    /* float: left; */
+    position: relative;
+    justify-content: center;
+}
+.scpfw_sdpp_popup_header h1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0px;
+    line-height: 30px;
+    text-transform: capitalize;
+}
+.scpfw_sdpp_popup_body {
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+}
+.scpfw_sdpp_popup_body table, .scpfw_sdpp_popup_body tbody {
+    margin: 0px;
+    display: inline-block;
+    width: 100%;
+}
+.scpfw_sdpp_child_div ul {
+    margin: 0px 0 0 20px;
+}
+.scpfw_sdpp_table tr {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: row;
+}
+/*end create sidepopup*/
+
+/*create extra tab*/
+.scpfw_tab_header {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.scpfw_tab_header h1 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0px;
+    line-height: 20px;
+}
+.scpfw_tab_body {
+    width: 100%;
+    display: inline-block;
+    margin-top: 20px;
+}
+.scpfw_tab_body table, .scpfw_tab_body tbody {
+    margin: 0px;
+    display: inline-block;
+    width: 100%;
+}
+.scpfw_popup_padding_div ul {
+    margin: 0px 0 0 20px;
+}
+.scpfw_child_div ul {
+    margin: 0px 0 0 20px;
+}
+/*end create extra tab*/
+
+
+ul.scpfw_front_tabs {
+    margin: 0px 15px 0px 15px;
+    padding: 0px;
+    list-style: none;
+    border-bottom: 1px solid #777;
+    font-size: 17px;
+}
+ul.scpfw_front_tabs li {
+    display: inline-block;
+    border-radius: 4px 4px 0 0;
+    padding: 6px 10px;
+    text-transform: capitalize;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0;
+}
+ul.scpfw_front_tabs li.current {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #777;
+    border-bottom-color: transparent;
+    margin-bottom: -1px;
+}
+
+.scpfw_front_tab_content {
+    display: none;
+    padding: 15px;
+    margin: 0px 15px 0px 15px;
+    border: 1px solid #777;
+    border-top: 0px;
+    font-size: 17px;
+}
+.scpfw_front_tab_content.current{
+    display: inherit;
+}
+body .scpfw_front_tab_content h2 {
+    margin: 0px 0px 10px 0px !important;
+    padding: 10px 10px !important;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px !important;
+}
+.scpfw_tableclass h2:before, .scpfw_tableclass h1:before{
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+}
+.scpfw_tableclass table tr td {
+    background-color: transparent!important;
+    padding: 5px;
+    font-size: 15px;
+    display: inline-block;
+    width: 33.33%;
+    box-sizing: border-box;
+    border: none;
+}
+#scpfw_sizechart_popup .scpfw_tableclass table tr:nth-child(1) {
+    box-sizing: border-box;
+}
+.scpfw_child_div img {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.scpfw_child_div tr {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 767px) {
+    .scpfw_sizechart_content {
+        width: 90%;
+    }
+    .scpfw_child_div {
+        overflow: auto;
+        width: 100%;
+    }
+    ul.scpfw_front_tabs li.current {
+        border: none;
+        background-color: #ccc;
+    }
+    ul.scpfw_front_tabs li {
+        border-radius: 0px; 
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    ul.scpfw_front_tabs {
+        margin: 0px;
+        border-bottom: 1px solid #777;
+        padding: 0px !important;
+    }
+    .scpfw_front_tab_content {
+        overflow: hidden;
+        margin: 0px;
+        border: none;
+    }
+    .scpfw_popup_padding_div {
+        border: 1px solid #777;
+    }
+    .scpfw_child_div ul {
+        margin: 0px;
+    }
+    /*sidepopup css start*/
+    ul.scpfw_sdpp_front_tabs li.current {
+        border: none;
+        background-color: #ccc;
+    }
+    ul.scpfw_sdpp_front_tabs li {
+        border-radius: 0px; 
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    ul.scpfw_sdpp_front_tabs {
+        margin: 0px;
+        border-bottom: 1px solid #777;
+    }
+    .scpfw_sdpp_frtab_content {
+        overflow: hidden;
+        margin: 0px;
+        border: none;
+    }
+    .scpfw_sdpp_padding_div {
+        border: 1px solid #777;
+    }
+    .scpfw_sdpp_child_div {
+        overflow: auto;
+        width: 100%;
+    }
+    .scpfw_sdpp_child_div ul {
+        margin: 0px;
+    }
+    /*sidepopup css end*/
+}
